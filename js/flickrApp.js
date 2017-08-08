@@ -11,7 +11,6 @@
     flickrApp.controller('flickrAppController', ['$scope', '$http', function ($scope, $http) {
         $scope.value = "some value";
 
-
         $http.jsonp(flickrAPI).success(function (data) {
             $scope.data = data;
             $scope.post = data.items;

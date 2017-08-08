@@ -8,31 +8,20 @@
     <!--External Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/flickr.css">
-
-   
-    
-    
-    <!-- Internal Scripts -->
-	<script type="text/javascript" src="">
-        
-	</script>
-
     <title>flickrTest</title>
-
-	
+    
 </head>
 
 <body >
     <div class="container-fluid main-content" ng-controller="flickrAppController">
        <div class="row justify-content-center" ng-repeat="item in post">
-
            <div class="col-md-11" >
                <div class="card">
                   <img src="{{item.media.m}}" alt="flicker image" class="img-thumbnail">
                   <div class="card-block">
                     <h4 class="card-title truncate"><a href="{{item.link}}">{{item.title}}</a></h4>
-                    <p class="card-text published">Published: {{item.published}} </p>
-                    <a href="{{item.author}} " class="card-link author">Photo author</a>
+                    <p class="card-text published">Published: {{item.published | date:'d MMM yyyy HH:mm'}}</p>
+                    <a href="{{item.author}}" class="card-link author">Photo author</a>
                     <a href="{{item.link}}" class="card-link view-link">View on flickr</a>
                   </div>
                 </div>

@@ -3,7 +3,7 @@
     bottom: 20px;
 }
 .truncate {
-  width: 100%;
+  width: 40%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -29,6 +29,7 @@ img{
 .card-title{
     width: 44rem;
 }
+
 /*above 800px*/
 @media(min-width: 800px){
     .published {
@@ -36,7 +37,7 @@ img{
         padding-left: 7rem;
     }
     .card-link+.card-link {
-        margin-left: 18rem;
+        margin-left: 15rem;
     }
     .card-block {
         position: absolute;
